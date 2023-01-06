@@ -28,7 +28,7 @@ export default {
     methods: {
         getItems() {
             axios
-                .get("api/items")
+                .get("https://todo-api.danny-johansson.online/api/items")
                 .then(res => {
                     this.items = res.data;
                 })

@@ -28,7 +28,7 @@ export default {
     methods: {
         completeItem() {
             axios
-                .put(`api/item/${this.item.id}/complete`)
+                .put(`https://todo-api.danny-johansson.online/api/items/${this.item.id}/complete`)
                 .then(res => {
                     if (res.status === 200) {
                         this.$emit("itemchanged");
@@ -53,7 +53,7 @@ export default {
         },
         updateItem(new_name) {
             axios
-                .put(`api/item/${this.item.id}/update`, {
+                .put(`https://todo-api.danny-johansson.online/api/items/${this.item.id}/update`, {
                     name: new_name
                 })
                 .then(res => {
@@ -67,7 +67,7 @@ export default {
         },
         removeItem() {
             axios
-                .delete(`api/item/${this.item.id}`)
+                .delete(`https://todo-api.danny-johansson.online/api/items/${this.item.id}`)
                 .then(res => {
                     if (res.status === 200) {
                         this.$emit("itemchanged");

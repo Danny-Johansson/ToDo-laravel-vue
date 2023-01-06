@@ -36,7 +36,7 @@ export default {
                 return;
             }
             axios
-                .post("api/item/store", {
+                .post("https://todo-api.danny-johansson.online/api/items/store", {
                     item: this.item
                 })
                 .then(res => {
